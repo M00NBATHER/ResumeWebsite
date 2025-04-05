@@ -49,9 +49,12 @@ li{
 
 /* "Margin 0 auto" centers */
 #container--main{
-    max-width: 900px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 1em;
+}
+
+#banner--header{
+    padding: .5em;
 }
 
 .section--page{
@@ -62,36 +65,44 @@ li{
 /* Flex will inline everything, puts it all left to right */
 #wrapper--hero{
     display: flex;
-    align-items: center;
+    justify-content: center;
     gap: 4em;
 }
 
 #bio, a{
     font-weight: 300;
+    
 }
 
 #user-name{
     font-size: 48px;
     line-height: 1em;
+    text-align: center;
+    
 }
 
 #profile-pic{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: flex;
+    width: 60%;
+    height: 60%;
+    margin: auto;
+
     /* border-radius: 50%; */
 }
 
 #email{
+    text-align: center;
     color: var(--mainTextColor);
 }
 
 #socials--list{
     display: flex;
     /* justify-content: space-between; */
-    justify-content: flex-start;
+    justify-content: center;
     column-gap: 1em;
     flex-wrap: wrap;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--mainBorderColor);
 }
 
 #socials--list a{
@@ -105,9 +116,11 @@ li{
     font-weight: 100;
     color: var(--mainLinkColor);
     font-size: 0.9em;
+    
 }
 
 #qualifications--list{
+    
     list-style: square;
 }
 
