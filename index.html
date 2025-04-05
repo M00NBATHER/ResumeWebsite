@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+
+<!-- Building the hero of resume page. In web design the hero section is the big opening section that catches the user's eye and has the main message and/or theme -->
+
+<!-- I'm going to try to follow the BEM (Block-Element-Modifier) naming convention for consistency. I'm going to outline some of the basics for my own personal reference to help make it a habit.
+-Block (.button)
+    Uses a single class name : A standalone reusable UI component (such as a button, card or navigation bar)
+-Element (.button__text)
+    Uses block name separated by two underscores and then the block name: A part of block
+-Modifier (.button--active or .button__text--disabled)
+    Uses the block or element name followed by two hyphens and then the modifier name : A flag or state that changes the appearance or behavior of a block or element (active, disabled, expanded) -->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Robert O'Neill</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./styles/main.css">
+        <link rel="stylesheet" href="./styles/theme-switcher.css">
+        <!-- <script src="main.js"></script> -->
+    </head>
+
+    <body>
+        <!-- Creating a main container for everything in the page, so we are wrapping every item: -->
+        <!-- Starting with a div, some people like to use section tag -->
+
+        <div id="container--main">
+
+            <!-- Using section--page class so we can use certain styling for every section on the page. this will give us some padding etc. -->
+
+            <section id="wrapper--hero" class="section--page">
+                <img id="profile-pic" src= "./assets/images/Polaroid.JPEG"/>
+
+                <!-- div wrapping for heading, bio and email... -->
+                <div>
+                    <h1 id="user-name">Robert O'Neill</h1>
+                    <p id="bio">I am a software developer, independent game developer and co-songwriter for the band <a href="https://linktr.ee/timeeatermusic" target="_blank">Time Eater.</a></p>
+                    <p id="email">r.oneill1212@gmail.com</p>
+                    </p>
+                </div>
+            </section>
+
+            <!-- Note that target= "_blank" will open a new tab -->
+            <section class="section--page">
+                <div id="socials--list">
+                    <a href="https://github.com/M00NBATHER" target="_blank">My GitHub</a>
+                    <a href="./assets/Rob's Resume.pdf" target="_blank">Download Resume</a>
+                </div>
+            </section>
+
+            <section class="section--page">
+                <h2>Skills and Qualifications</h2>
+                <ul id="qualifications--list">
+                    <li>7 Years experience with front & backend development</li>
+                    <li>Experience using JIRA</li>
+                    <li>Extensive knowledge using GIT and TFS</li>
+                    <li>Hands on experience using the Godot, Unreal and Unity game engines</li>
+                </ul>
+            </section>
+
+            <section class="section--page">
+                <h2>Tech stack</h2>
+            
+                <div id="wrapper--techstack__items">
+                    <div class="card--techstack"><span>C#, C++</span></div>
+                    <div class="card--techstack"><span>CSS, HTML, Javascript</span></div>
+                    <div class="card--techstack"><span>Python, GDScript</span></div>
+                    <div class="card--techstack"><span>Basic Linux CMD, Express</span></div>
+                </div>
+            </section>
+
+
+            <!-- <section id="work-history-wrapper" class="section--page">
+                <h2>Work History</h2>
+            
+                <div class="line-break"></div>
+                <div class="card--work-history">
+                    <strong>🚧 DEVELOPER ADVOCATE | AGORA.IO</strong>
+                    <p>11/2021 - Present</p>
+                    <p>Worked on making Agora’s Web Based SDK more accessible through video tutorials, articles, demo projects and event based training. Also building out React UI components & leading a team to re-design Agora’s documentation and api reference.</p>
+                    <ul>
+                        <li>Doubled Web SDK’s monthly usage minutes from 15 million to 30 million minutes within my first 4 months</li>
+                        <li>Produced educational video content which resulted in 300k+ views on youtube</li>
+                        <li>Produced SEO campaigns and content to gain market share for related keywords.</li>
+                    </ul>
+                </div>
+            
+                <div class="line-break"></div>
+            
+                <div class="card--work-history">
+                    <strong>🚧 INSTRUCTOR | YOUTUBE, UDEMY, TEACHABLE</strong>
+                    <p>11/2019 - Present</p>
+                    <p>Produced content showcasing new tech, tutorials & interviews with top developers.</p>
+                    <ul>
+                        <li>166,000+ Youtube Subscribers</li>
+                        <li>30,000 course copies sold</li>
+                        <li>12+ Million views on Youtube</li>
+                        <li>Made regular contributions to Traversy Medias youtube channel (1.9m Subscribers)</li>
+                        <li>Tutorial videos included projects such as social networks, Ecommerce, real time video, stripe & paypal integrations and more </li>
+                    </ul>
+                </div>
+            
+                <div class="line-break"></div>
+            
+                <div class="card--work-history">
+                    <strong>🚧 SENIOR DEVELOPER | FOI LABS</strong>
+                    <p>10/2017 - 10/2019</p>
+                    <p>Designed and developed a laboratory management system. My system
+                        provided an interface for lab technicians and customers to view and
+                        track data from samples tested in the lab.</p>
+                    <ul>
+                        <li>Designed prototype & pitched original idea for new lab management system (LIMS)</li>
+                        <li>Built entire code base and brought version 1 of LIMS system to market as a solo developer</li>
+                        <li>Onboarded and trained customers (Webinars & Conferences)</li>
+                        <li>Managed a small team of developers in expansion of LIMS system</li>
+                    </ul>
+                </div>
+            
+                <div class="line-break"></div>
+            
+                <div class="card--work-history">
+                    <strong>🚧 DIGITAL MARKETER | UNIFIVE DIGITAL</strong>
+                    <p>2014 - 2017</p>
+                    <p>Started a digital agency building websites and marketing for
+                        local businesses. Mostly Wordpress sites with small modifications to
+                        themes.</p>
+                    <ul>
+                        <li>Organized SEO & SEM campaigns on a local and global scale.</li>
+                        <li>Saved a customer $110k a year by reducing Adwords CPC cost with optimization</li>
+                        <li>70 + websites built with my small team of developers and freelancers</li>
+                    </ul>
+                </div>
+            </section> -->
+
+
+
+            <section class="section--page">
+                <h2>Projects & "Accomplishments"</h2>
+            
+                <div class="card--project">
+                    <a href="project1.html"><span></span>A Project™</a>
+                </div>          
+                <!-- <div class="card--project">
+                    <a href="project1.html" ><span></span>Documentation website - Lead team to re-build docs for agora.io</a>
+                </div>
+            
+                <div class="card--project">
+                    <a href="project1.html" ><span></span>Ecommerce platform using paypal and stripe API for payment integration</a>
+                </div>
+            
+                <div class="card--project">
+                    <a href="project1.html"><span></span>Social Network - open source project</a>
+                </div>   -->
+            </section>
+
+        </div>
+        <div id="theme-switcher">
+            <div class="theme" id="theme-light" data-theme="light"></div>
+            <div class="theme" id="theme-dark" data-theme="dark"></div>
+        </div>
+    </body>
+
+    <script src="js/theme-switcher.js"></script>
+
+</html>
